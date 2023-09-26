@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Git", "Git", "{EA5DBFC4-955
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mjos.Clean.Shared", "Mjos.Clean.Shared\Mjos.Clean.Shared.csproj", "{45D8EABF-CEF3-45D2-A113-5009CC16A0B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{FBED6A6F-0636-47B5-B29D-74FEF8CA9C5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,12 +26,17 @@ Global
 		{8028B91D-C076-4BFE-A587-418F3A6F851F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8028B91D-C076-4BFE-A587-418F3A6F851F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8028B91D-C076-4BFE-A587-418F3A6F851F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45D8EABF-CEF3-45D2-A113-5009CC16A0B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45D8EABF-CEF3-45D2-A113-5009CC16A0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45D8EABF-CEF3-45D2-A113-5009CC16A0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45D8EABF-CEF3-45D2-A113-5009CC16A0B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8028B91D-C076-4BFE-A587-418F3A6F851F} = {B43F7E67-562A-4EB9-8574-0A70366219A1}
+		{45D8EABF-CEF3-45D2-A113-5009CC16A0B8} = {FBED6A6F-0636-47B5-B29D-74FEF8CA9C5A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E13BADBD-7CC9-4A96-B0CC-81EFAC7D3B2D}
