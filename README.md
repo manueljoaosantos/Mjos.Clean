@@ -26,3 +26,15 @@ dotnet sln add .\Mjos.Clean.Shared\
 git flow feature finish Shared
 
 ```
+
+```Shell
+git flow feature start Application
+
+dotnet new classlib -o Mjos.Clean.Application
+dotnet sln add .\Mjos.Clean.Application\
+
+...
+
+git flow feature finish Application
+
+```
