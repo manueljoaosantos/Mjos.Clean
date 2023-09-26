@@ -10,4 +10,7 @@ dotnet sln add .\Mjos.Clean.Domain\
 git flow init
 
 git flow feature start Domain
+...
+git flow feature finish Domain
+
 ```
