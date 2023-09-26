@@ -14,3 +14,15 @@ git flow feature start Domain
 git flow feature finish Domain
 
 ```
+
+```Shell
+git flow feature start Shared
+
+dotnet new classlib -o Mjos.Clean.Shared
+dotnet sln add .\Mjos.Clean.Shared\
+
+...
+
+git flow feature finish Shared
+
+```
