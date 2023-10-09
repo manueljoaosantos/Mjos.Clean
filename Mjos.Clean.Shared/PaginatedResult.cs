@@ -15,7 +15,7 @@ namespace Mjos.Clean.Shared
             Data = data;
         }
 
-        public PaginatedResult(bool succeeded, List<T> data = default, List<string> messages = null, int count = 0, int pageNumber = 1, int pageSize = 10)
+        public PaginatedResult(bool succeeded, List<T> data = default!, List<string> messages = null!, int count = 0, int pageNumber = 1, int pageSize = 10)
         {
             Data = data;
             CurrentPage = pageNumber;
@@ -37,7 +37,7 @@ namespace Mjos.Clean.Shared
 
         public static PaginatedResult<T> Create(List<T> data, int count, int pageNumber, int pageSize)
         {
-            return new PaginatedResult<T>(true, data, null, count, pageNumber, pageSize);
+            return new PaginatedResult<T>(true, data, null!, count, pageNumber, pageSize);
         }
     }
 }

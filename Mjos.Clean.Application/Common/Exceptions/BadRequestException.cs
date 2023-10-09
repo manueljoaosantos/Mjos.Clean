@@ -2,7 +2,7 @@
 {
     public class BadRequestException : Exception
     {
-        public string[] Errors { get; set; }
+        public string[] Errors { get; set; } = default!;
 
         public BadRequestException()
             : base()
