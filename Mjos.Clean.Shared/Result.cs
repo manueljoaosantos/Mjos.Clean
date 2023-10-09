@@ -8,7 +8,7 @@ namespace Mjos.Clean.Shared
 
         public bool Succeeded { get; set; }
 
-        public T Data { get; set; }
+        public T Data { get; set; } = default!;
 
         //public List<ValidationResult> ValidationErrors { get; set; }
 

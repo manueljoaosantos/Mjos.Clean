@@ -41,7 +41,7 @@ namespace Mjos.Clean.Application.Common.Mappings
                     {
                         foreach (var @interface in interfaces)
                         {
-                            var interfaceMethodInfo = @interface.GetMethod(mappingMethodName, argumentTypes);
+                            var interfaceMethodInfo = @interface.GetMethod(mappingMethodName, argumentTypes)!;
 
                             interfaceMethodInfo.Invoke(instance, new object[] { this });
                         }
