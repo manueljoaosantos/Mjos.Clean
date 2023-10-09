@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mjos.Clean.Infrastructure", "Mjos.Clean.Infrastructure\Mjos.Clean.Infrastructure.csproj", "{651164F1-ACB7-4001-BE2E-7F3F970265E0}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mjos.Clean.Persistence", "Mjos.Clean.Persistence\Mjos.Clean.Persistence.csproj", "{E82F7DE0-5079-4E5A-AA4B-B749327EBBF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{651164F1-ACB7-4001-BE2E-7F3F970265E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{651164F1-ACB7-4001-BE2E-7F3F970265E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{651164F1-ACB7-4001-BE2E-7F3F970265E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E82F7DE0-5079-4E5A-AA4B-B749327EBBF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E82F7DE0-5079-4E5A-AA4B-B749327EBBF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E82F7DE0-5079-4E5A-AA4B-B749327EBBF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E82F7DE0-5079-4E5A-AA4B-B749327EBBF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{45D8EABF-CEF3-45D2-A113-5009CC16A0B8} = {FBED6A6F-0636-47B5-B29D-74FEF8CA9C5A}
 		{C3777114-38F6-4992-B9F6-B4E06FD5BB40} = {B43F7E67-562A-4EB9-8574-0A70366219A1}
 		{651164F1-ACB7-4001-BE2E-7F3F970265E0} = {6C67CC97-3092-4C4A-A620-FFE32EFB40FC}
+		{E82F7DE0-5079-4E5A-AA4B-B749327EBBF2} = {6C67CC97-3092-4C4A-A620-FFE32EFB40FC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E13BADBD-7CC9-4A96-B0CC-81EFAC7D3B2D}
