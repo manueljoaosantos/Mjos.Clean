@@ -14,10 +14,8 @@
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.11" />
 	</ItemGroup>
 	<ItemGroup>
-		<Folder Include="Features\Clubs\Commands\CreateClub\" />
 		<Folder Include="Features\Clubs\Commands\DeleteClub\" />
 		<Folder Include="Features\Clubs\Commands\UpdateClub\" />
-		<Folder Include="Features\Clubs\Queries\GetAllClubs\" />
 		<Folder Include="Features\Clubs\Queries\GetClubById\" />
 		<Folder Include="Features\Clubs\Queries\GetClubsWithPagination\" />
 		<Folder Include="Features\Stadiums\Commands\" />
