@@ -38,3 +38,10 @@ dotnet sln add .\Mjos.Clean.Application\
 git flow feature finish Application
 
 ```
+
+```
+PS C:\Temp\Mjos.Clean> dotnet ef migrations add IdentityInitial -p Mjos.Clean.Persistence -s Mjos.Clean.Api -c ApplicationDbContext -o Data/Migrations
+PS C:\Temp\Mjos.Clean\Mjos.Clean.Api> dotnet ef database update -c ApplicationDbContext
+```
+
+dotnet new xunit -o Mjos.Clean.Tests

@@ -25,7 +25,7 @@ namespace Mjos.Clean.Persistence.Extensions
 
         public static void AddDbContext(this IServiceCollection services, IConfiguration configuration)
         {
-            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            var connectionString = configuration.GetConnectionString("Mjsantos:SqlDb");
 
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(connectionString,

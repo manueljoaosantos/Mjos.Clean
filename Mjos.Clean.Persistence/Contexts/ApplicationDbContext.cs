@@ -11,13 +11,18 @@ namespace Mjos.Clean.Persistence.Contexts
     public class ApplicationDbContext : DbContext
     {
         private readonly IDomainEventDispatcher _dispatcher;
-
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options,
-          IDomainEventDispatcher dispatcher)
-            : base(options)
+        public ApplicationDbContext()
+        { }
+        public ApplicationDbContext(DbContextOptions options) : base(options)
         {
-            _dispatcher = dispatcher;
         }
+
+        //public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options,
+        //  IDomainEventDispatcher dispatcher)
+        //    : base(options)
+        //{
+        //    _dispatcher = dispatcher;
+        //}
 
         public DbSet<Club> Clubs => Set<Club>();
         public DbSet<Player> Players => Set<Player>();
