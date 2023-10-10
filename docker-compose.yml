@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    user: root
+    #command: /bin/bash ./entrypoint.sh
+    environment:
+      SA_PASSWORD: MjosTeste123.
+      MSSQL_SA_PASSWORD: MjosTeste123.
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqldata:/var/opt/mssql/data
+volumes:
+  sqldata:
