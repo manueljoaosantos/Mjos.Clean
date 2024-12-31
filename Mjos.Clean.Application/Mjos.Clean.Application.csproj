@@ -14,16 +14,6 @@
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.11" />
 	</ItemGroup>
 	<ItemGroup>
-		<Folder Include="Features\Clubs\Commands\DeleteClub\" />
-		<Folder Include="Features\Clubs\Commands\UpdateClub\" />
-		<Folder Include="Features\Clubs\Queries\GetClubById\" />
-		<Folder Include="Features\Clubs\Queries\GetClubsWithPagination\" />
-		<Folder Include="Features\Stadiums\Commands\" />
-		<Folder Include="Features\Stadiums\Commands\" />
-		<Folder Include="Features\Stadiums\Queries\" />
-		<Folder Include="Features\Stadiums\Queries\" />
-	</ItemGroup>
-	<ItemGroup>
 	  <ProjectReference Include="..\Mjos.Clean.Domain\Mjos.Clean.Domain.csproj" />
 	  <ProjectReference Include="..\Mjos.Clean.Shared\Mjos.Clean.Shared.csproj" />
 	</ItemGroup>

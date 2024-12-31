@@ -1,15 +1,9 @@
 ﻿using AutoMapper;
 using MediatR;
 using Mjos.Clean.Application.Common.Mappings;
-using Mjos.Clean.Application.Features.Players.Commands.CreatePlayer;
 using Mjos.Clean.Application.Interfaces.Repositories;
 using Mjos.Clean.Domain.Entities;
 using Mjos.Clean.Shared;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Mjos.Clean.Application.Features.Clubs.Commands.CreateClub
 {

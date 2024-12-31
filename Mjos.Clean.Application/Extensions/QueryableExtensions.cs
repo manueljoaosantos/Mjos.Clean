@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Mjos.Clean.Shared;
-using System.Threading;
 
 namespace Mjos.Clean.Application.Extensions
 {

@@ -1,13 +1,6 @@
 ﻿using Mjos.Clean.Application.Common.Mappings;
 using Mjos.Clean.Domain.Entities;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Mjos.Clean.Application.Features.Players.Queries.GetPlayersWithPagination
 {
     public class GetAllPlayersDto : IMapFrom<Player>

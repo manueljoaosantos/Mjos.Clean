@@ -1,11 +1,7 @@
 ﻿
 using Mjos.Clean.Domain.Common;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using MediatR;
 using Moq;
-using Xunit;
 
 namespace Mjos.Clean.Tests.Domain.Common
 {

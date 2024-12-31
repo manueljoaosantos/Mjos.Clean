@@ -1,10 +1,10 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Mjos.Clean.Application.Features.Clubs.Commands.CreateClub;
 using Mjos.Clean.Application.Features.Clubs.Queries.GetAllClubs;
-using Mjos.Clean.Application.Features.Players.Commands.CreatePlayer;
-using Mjos.Clean.Application.Features.Players.Queries.GetPlayersWithPagination;
+using Mjos.Clean.Application.Features.Players.Commands.DeleteClub;
+using Mjos.Clean.Application.Features.Players.Commands.UpdatePlayer;
+using Mjos.Clean.Application.Features.Players.Queries.GetClubById;
 using Mjos.Clean.Application.Interfaces.Repositories;
 using Mjos.Clean.Domain.Entities;
 using Mjos.Clean.Shared;
@@ -33,6 +33,29 @@ namespace Mjos.Clean.Api.Controllers
         public async Task<ActionResult<Result<int>>> Create(CreateClubCommand command)
         {
             return await _mediator.Send(command);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Result<int>>> Update(int id, UpdateClubCommand command)
+        {
+            if (id != command.Id)
+            {
+                return BadRequest();
+            }
+
+            return await _mediator.Send(command);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Result<int>>> Delete(int id)
+        {
+            return await _mediator.Send(new DeleteClubCommand(id));
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Result<GetClubByIdDto>>> GetClubsById(int id)
+        {
+            return await _mediator.Send(new GetClubByIdQuery(id));
         }
     }
 }

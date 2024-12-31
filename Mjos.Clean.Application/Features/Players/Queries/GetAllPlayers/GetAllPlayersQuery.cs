@@ -1,13 +1,11 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-
-using Mjos.Clean.Application.Extensions;
 using Mjos.Clean.Application.Interfaces.Repositories;
 using Mjos.Clean.Domain.Entities;
 using Mjos.Clean.Shared;
 using MediatR;
 
-using Microsoft.EntityFrameworkCore; 
+using Microsoft.EntityFrameworkCore;
 
 namespace Mjos.Clean.Application.Features.Players.Queries.GetPlayersWithPagination
 {

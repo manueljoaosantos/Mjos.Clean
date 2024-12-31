@@ -1,6 +1,4 @@
 ﻿using AutoMapper;
-
-using Mjos.Clean.Application.Common.Exceptions;
 using Mjos.Clean.Application.Interfaces.Repositories;
 using Mjos.Clean.Domain.Entities;
 using Mjos.Clean.Shared;

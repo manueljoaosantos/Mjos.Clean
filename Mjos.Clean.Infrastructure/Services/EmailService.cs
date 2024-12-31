@@ -1,7 +1,5 @@
 ﻿using Mjos.Clean.Application.DTOs.Email;
 using Mjos.Clean.Application.Interfaces;
-
-using Microsoft.Extensions.Logging;
 using System.Net.Mail;
 
 namespace Mjos.Clean.Infrastructure.Services

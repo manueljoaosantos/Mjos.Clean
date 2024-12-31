@@ -1,14 +1,7 @@
 ﻿using Mjos.Clean.Application.Interfaces.Repositories;
 using Mjos.Clean.Domain.Entities;
-using Mjos.Clean.Persistence.Contexts;
 
 using Microsoft.EntityFrameworkCore;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Mjos.Clean.Persistence.Repositories
 {
@@ -19,6 +12,11 @@ namespace Mjos.Clean.Persistence.Repositories
         public ClubRepository(IGenericRepository<Club> repository) 
         {
             _repository = repository;
-        } 
+        }
+
+        public async Task<List<Club>> GetClubsByStadiumAsync(int stadiumId)
+        {
+            return await _repository.Entities.Where(x => x.StadiumId == stadiumId).ToListAsync();
+        }
     }
 }

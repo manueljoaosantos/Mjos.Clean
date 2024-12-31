@@ -1,20 +1,11 @@
 ﻿using AutoMapper;
 
 using Mjos.Clean.Application.Common.Mappings;
-using Mjos.Clean.Application.Features.Players.Commands.UpdatePlayer;
 using Mjos.Clean.Application.Interfaces.Repositories;
 using Mjos.Clean.Domain.Entities;
 using Mjos.Clean.Shared;
 
 using MediatR;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace Mjos.Clean.Application.Features.Players.Commands.DeletePlayer
 {

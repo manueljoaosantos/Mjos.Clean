@@ -1,6 +1,5 @@
 ﻿using Mjos.Clean.Application.Interfaces.Repositories;
 using Mjos.Clean.Domain.Common;
-using Mjos.Clean.Domain.Common.Interfaces;
 using Mjos.Clean.Persistence.Contexts;
 
 using System.Collections;

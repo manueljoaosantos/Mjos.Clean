@@ -2,15 +2,9 @@
 using AutoMapper.QueryableExtensions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using Mjos.Clean.Application.Features.Players.Queries.GetPlayersWithPagination;
 using Mjos.Clean.Application.Interfaces.Repositories;
 using Mjos.Clean.Domain.Entities;
 using Mjos.Clean.Shared;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Mjos.Clean.Application.Features.Clubs.Queries.GetAllClubs
 {

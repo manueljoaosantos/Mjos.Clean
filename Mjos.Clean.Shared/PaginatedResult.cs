@@ -1,12 +1,4 @@
-﻿using Mjos.Clean.Shared.Interfaces;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Mjos.Clean.Shared
+﻿namespace Mjos.Clean.Shared
 {
     public class PaginatedResult<T> : Result<T>
     {
