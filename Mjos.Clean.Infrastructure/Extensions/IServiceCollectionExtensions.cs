@@ -6,6 +6,10 @@ using Mjos.Clean.Infrastructure.Services;
 using MediatR;
 
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
+using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Mjos.Clean.Infrastructure.Extensions
 {
@@ -23,6 +27,66 @@ namespace Mjos.Clean.Infrastructure.Extensions
                 .AddTransient<IDomainEventDispatcher, DomainEventDispatcher>()
                 .AddTransient<IDateTimeService, DateTimeService>()
                 .AddTransient<IEmailService, EmailService>();
+        }
+
+        public static void AddSwaggerGenWithAuth(this IServiceCollection services, 
+            IConfiguration configuration)
+        {
+            services.AddSwaggerGen(o =>
+            {
+                o.CustomSchemaIds(id => id.FullName!.Replace('+', '-'));
+
+                o.AddSecurityDefinition("Keycloak", new OpenApiSecurityScheme
+                {
+                    Type = SecuritySchemeType.OAuth2,
+                    Flows = new OpenApiOAuthFlows
+                    {
+                        Implicit = new OpenApiOAuthFlow
+                        {
+                            AuthorizationUrl = new Uri(configuration["Keycloak:AuthorizationUrl"]!),
+                            Scopes = new Dictionary<string, string>
+                            {
+                                { "openid", "openid" },
+                                { "profile", "profile" }
+                            }
+                        }
+                    }
+                });
+
+                var securityRequirement = new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Id = "Keycloak",
+                                Type = ReferenceType.SecurityScheme
+                            },
+                            In = ParameterLocation.Header,
+                            Name = "Bearer",
+                            Scheme = "Bearer"
+                        },
+                        new List<string>() // Empty list for scopes
+                    }
+                };
+                o.AddSecurityRequirement(securityRequirement);
+            });
+        }
+
+        public static void AddJwtAuthentication(this IServiceCollection services)
+        {
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(o =>
+                {
+                    o.RequireHttpsMetadata = false; // Set to true in production
+                    o.Audience = "YourAudienceHere"; // Replace with your actual audience
+                    o.MetadataAddress = "YourMetadataAddressHere"; // Replace with your actual metadata address
+                    o.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidIssuer = "YourValidIssuerHere" // Replace with your actual valid issuer
+                    };
+                });
         }
     }
 }
