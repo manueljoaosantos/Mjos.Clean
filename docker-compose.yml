@@ -1,9 +1,3 @@
-x-logging: &logging
-  driver: "json-file"
-  options:
-    max-size: "10m"
-    max-file: "3"
-
 services:
   postgres:
     image: postgres:${POSTGRES_VERSION}
@@ -12,29 +6,27 @@ services:
       test: ["CMD", "pg_isready", "-U", "keycloak"]
     environment:
       POSTGRES_DB: keycloak
-      POSTGRES_USER: keycloak
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: ${POSTGRES_USER:-keycloak}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
     volumes:
-      - type: tmpfs
-        target: /var/lib/postgresql/data
-        tmpfs:
-          size: 100000000
-    logging: *logging
-
+      - ./postgresql/var/lib/postgresql:/var/lib/postgresql
+      - ./postgresql/var/lib/postgresql/data:/var/lib/postgresql/data
   keycloak:
     image: quay.io/keycloak/keycloak:${KC_VERSION}
     command: ["start-dev", "--import-realm"]
     restart: unless-stopped
     environment:
       KC_DB: postgres
-      KC_DB_USERNAME: keycloak
-      KC_DB_PASSWORD: password
+      KC_DB_USERNAME: ${POSTGRES_USER:-keycloak}
+      KC_DB_PASSWORD: ${POSTGRES_PASSWORD:-password}
       KC_DB_URL: "jdbc:postgresql://postgres:5432/keycloak"
       KC_METRICS_ENABLED: true
       KC_LOG_LEVEL: ${KC_LOG_LEVEL}
       KC_REALM_NAME: ${KC_REALM_NAME}
-      KC_BOOTSTRAP_ADMIN_USERNAME: ${KEYCLOAK_ADMIN}
+      KC_BOOTSTRAP_ADMIN_USERNAME: ${KEYCLOAK_ADMIN_TEMP}
       KC_BOOTSTRAP_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
+      KC_ADMIN_USER: ${KEYCLOAK_ADMIN}
+      KC_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
       GF_URL: ${GF_HOSTNAME}:${GF_SERVER_HTTP_PORT}
       GF_ADMIN_USERNAME: ${GF_ADMIN_USERNAME}
       GF_ADMIN_PASSWORD: ${GF_ADMIN_PASSWORD}
@@ -42,19 +34,20 @@ services:
       - ${KC_PORT}:8080
     volumes:
       - ./keycloak/realm.json:/opt/keycloak/data/import/realm.json:ro
-    logging: *logging
+      - ./keycloak/realm-export.json:/opt/keycloak/data/import/realm-export.json
+      - ./keycloak/data:/data
+      - ./keycloak/providers:/opt/jboss/keycloak/providers
+      - ./keycloak/standalone/configuration:/opt/jboss/keycloak/standalone/configuration
 
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
     user: root
     #command: /bin/bash ./entrypoint.sh
     environment:
-      SA_PASSWORD: MjosTeste123.
-      MSSQL_SA_PASSWORD: MjosTeste123.
+      SA_PASSWORD: ${SQLSERVER_SA_PASSWORD:-MjosTeste123.}
+      MSSQL_SA_PASSWORD: ${SQLSERVER_MSSQL_SA_PASSWORD:-MjosTeste123.}
       ACCEPT_EULA: "Y"
     ports:
       - "1433:1433"
     volumes:
       - ./sqldata:/var/opt/mssql/data
-volumes:
-  sqldata:
