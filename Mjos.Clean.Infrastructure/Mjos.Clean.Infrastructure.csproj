@@ -4,7 +4,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-  <ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.0" />
+	</ItemGroup>
+	<ItemGroup>
     <ProjectReference Include="..\Mjos.Clean.Application\Mjos.Clean.Application.csproj" />
   </ItemGroup>
 </Project>
