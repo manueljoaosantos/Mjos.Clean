@@ -10,6 +10,8 @@ using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
 
 namespace Mjos.Clean.Infrastructure.Extensions
 {
@@ -29,7 +31,7 @@ namespace Mjos.Clean.Infrastructure.Extensions
                 .AddTransient<IEmailService, EmailService>();
         }
 
-        public static void AddSwaggerGenWithAuth(this IServiceCollection services, 
+        public static void AddSwaggerGenWithAuth(this IServiceCollection services,
             IConfiguration configuration)
         {
             services.AddSwaggerGen(o =>
@@ -86,6 +88,20 @@ namespace Mjos.Clean.Infrastructure.Extensions
                     {
                         ValidIssuer = "YourValidIssuerHere" // Replace with your actual valid issuer
                     };
+                });
+        }
+
+        public static void AddOpenTelemetryCustom(this IServiceCollection services)
+        {
+            services
+                .AddOpenTelemetry()
+                .ConfigureResource(resourse => resourse.AddService("Mjos.Clean.Api"))
+                .WithTracing(tracing =>
+                {
+                    tracing
+                        .AddAspNetCoreInstrumentation()
+                        .AddHttpClientInstrumentation();
+                    tracing.AddOtlpExporter();
                 });
         }
     }
