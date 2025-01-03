@@ -1,4 +1,22 @@
 services:
+  mjos.clean.api:
+    image: ${DOCKER_REGISTRY}mjoscleanapi
+    container_name: Mjos.Clean.Api
+    build:
+      context: .
+      dockerfile: Mjos.Clean.Api/Dockerfile
+    ports:
+      - "5000:5000" # HTTP
+      - "5001:5001" # HTTPS
+    volumes:
+      - ./Mjos.Clean.Api/certs/https.crt:/certs/https.crt # Mount the certificate
+      - ./Mjos.Clean.Api/certs/https.key:/certs/https.key # Mount the key
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production # Set the environment
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/certs/https.crt
+      - ASPNETCORE_Kestrel__Certificates__Default__KeyPath=/certs/https.key
+      - OTEL_EXPORTER_OTLP_ENDPOINT:"http://jaeger:4317"
+
   postgres:
     image: postgres:${POSTGRES_VERSION}
     restart: unless-stopped
@@ -11,6 +29,7 @@ services:
     volumes:
       - ./postgresql/var/lib/postgresql:/var/lib/postgresql
       - ./postgresql/var/lib/postgresql/data:/var/lib/postgresql/data
+
   keycloak:
     image: quay.io/keycloak/keycloak:${KC_VERSION}
     command: ["start-dev", "--import-realm"]
@@ -51,3 +70,11 @@ services:
       - "1433:1433"
     volumes:
       - ./sqldata:/var/opt/mssql/data
+
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    container_name: Jaeger
+    ports:
+      - 4317:4317
+      - 4318:4318
+      - 16686:16686

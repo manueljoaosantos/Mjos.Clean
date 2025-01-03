@@ -1,4 +1,5 @@
 # Mjos.Clean
+
 Clean Architecture with MediatR
 
 ```Shell
@@ -45,3 +46,7 @@ PS C:\Temp\Mjos.Clean\Mjos.Clean.Api> dotnet ef database update -c ApplicationDb
 ```
 
 dotnet new xunit -o Mjos.Clean.Tests
+
+```
+C:\Program Files\OpenSSL-Win64\bin\openssl.exe req -x509 -nodes -days 365 -newkey rsa:2048 -keyout https.key -out https.crt -subj "/CN=localhost"
+```
