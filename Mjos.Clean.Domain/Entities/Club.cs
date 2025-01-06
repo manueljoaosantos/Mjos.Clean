@@ -11,12 +11,12 @@ namespace Mjos.Clean.Domain.Entities
         }
 
         public string Name { get; set; } = string.Empty;
-        public string PhotoUrl { get; set; } = string.Empty;
-        public string WebsiteUrl { get; set; } = string.Empty;
-        public string FacebookUrl { get; set; } = string.Empty;
-        public string TwitterUrl { get; set; } = string.Empty;
-        public string YoutubeUrl { get; set; } = string.Empty;
-        public string InstagramUrl { get; set; } = string.Empty;
+        public string? PhotoUrl { get; set; }
+        public string? WebsiteUrl { get; set; }
+        public string? FacebookUrl { get; set; }
+        public string? TwitterUrl { get; set; }
+        public string? YoutubeUrl { get; set; }
+        public string? InstagramUrl { get; set; }
         public int? StadiumId { get; set; }
 
         public Stadium Stadium { get; set; } = new();

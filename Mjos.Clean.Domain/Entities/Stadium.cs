@@ -15,12 +15,12 @@ namespace Mjos.Clean.Domain.Entities
         public int? BuiltYear { get; set; }
         public int? PitchLength { get; set; }
         public int? PitchWidth { get; set; }
-        public string Phone { get; set; } = string.Empty;
-        public string AddressLine1 { get; set; } = string.Empty;
-        public string AddressLine2 { get; set; } = string.Empty;
-        public string AddressLine3 { get; set; } = string.Empty;
-        public string City { get; set; } = string.Empty;
-        public string PostalCode { get; set; } = string.Empty;
+        public string? Phone { get; set; }
+        public string? AddressLine1 { get; set; }
+        public string? AddressLine2 { get; set; }
+        public string? AddressLine3 { get; set; }
+        public string? City { get; set; }
+        public string? PostalCode { get; set; }
         public int? CountryId { get; set; }
 
         public Country Country { get; set; } = new();

@@ -23,7 +23,7 @@ namespace Mjos.Clean.Application.Features.TeamSquads.Queries.GetAllTeamSquads
 
         public async Task<Result<List<GetAllTeamSquadsDto>>> Handle(GetAllTeamSquadsQuery query, CancellationToken cancellationToken)
         {
-            var teamSquads = await _unitOfWork.Repository<Country>().Entities
+            var teamSquads = await _unitOfWork.Repository<TeamSquad>().Entities
                    .ProjectTo<GetAllTeamSquadsDto>(_mapper.ConfigurationProvider)
                    .ToListAsync(cancellationToken);
 
