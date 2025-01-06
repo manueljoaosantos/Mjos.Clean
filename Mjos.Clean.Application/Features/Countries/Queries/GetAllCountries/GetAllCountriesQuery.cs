@@ -6,7 +6,7 @@ using Mjos.Clean.Application.Interfaces.Repositories;
 using Mjos.Clean.Domain.Entities;
 using Mjos.Clean.Shared;
 
-namespace Mjos.Clean.Application.Features.Clubs.Queries.GetAllCountries
+namespace Mjos.Clean.Application.Features.Countries.Queries.GetAllCountries
 {
     public record GetAllCountriesQuery : IRequest<Result<List<GetAllCountriesDto>>>;
 

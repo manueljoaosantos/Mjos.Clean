@@ -4,7 +4,7 @@ using Mjos.Clean.Domain.Entities;
 using Mjos.Clean.Shared;
 
 using MediatR;
-namespace Mjos.Clean.Application.Features.Players.Commands.UpdateStadium
+namespace Mjos.Clean.Application.Features.Stadiums.Commands.UpdateStadium
 {
     public record UpdateStadiumCommand : IRequest<Result<int>>
     {

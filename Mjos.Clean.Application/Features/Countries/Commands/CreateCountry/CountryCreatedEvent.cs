@@ -1,7 +1,7 @@
 ﻿using Mjos.Clean.Domain.Common;
 using Mjos.Clean.Domain.Entities;
 
-namespace Mjos.Clean.Application.Features.Clubs.Commands.CreateCountry
+namespace Mjos.Clean.Application.Features.Countries.Commands.CreateCountry
 {
     public class CountryCreatedEvent : BaseEvent
     {

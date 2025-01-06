@@ -6,7 +6,7 @@ using Mjos.Clean.Application.Interfaces.Repositories;
 using Mjos.Clean.Domain.Entities;
 using Mjos.Clean.Shared;
 
-namespace Mjos.Clean.Application.Features.Clubs.Queries.GetAllStadiums
+namespace Mjos.Clean.Application.Features.Stadiums.Queries.GetAllStadiums
 {
     public record GetAllStadiumsQuery : IRequest<Result<List<GetAllStadiumsDto>>>;
 

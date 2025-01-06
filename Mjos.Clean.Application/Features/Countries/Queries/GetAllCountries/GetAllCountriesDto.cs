@@ -1,7 +1,7 @@
 ﻿using Mjos.Clean.Application.Common.Mappings;
 using Mjos.Clean.Domain.Entities;
 
-namespace Mjos.Clean.Application.Features.Clubs.Queries.GetAllCountries
+namespace Mjos.Clean.Application.Features.Countries.Queries.GetAllCountries
 {
     public class GetAllCountriesDto : IMapFrom<Country>
     {

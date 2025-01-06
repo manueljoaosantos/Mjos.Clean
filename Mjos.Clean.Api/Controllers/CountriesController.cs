@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Mjos.Clean.Application.Features.Clubs.Commands.CreateCountry;
-using Mjos.Clean.Application.Features.Clubs.Queries.GetAllCountries;
+using Mjos.Clean.Application.Features.Countries.Commands.CreateCountry;
+using Mjos.Clean.Application.Features.Countries.Queries.GetAllCountries;
 using Mjos.Clean.Application.Interfaces.Repositories;
 using Mjos.Clean.Domain.Entities;
 using Mjos.Clean.Shared;

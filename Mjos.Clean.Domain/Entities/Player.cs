@@ -19,5 +19,7 @@ namespace Mjos.Clean.Domain.Entities
 
         public Club Club { get; set; } = new();
         public Country Country { get; set; }= new();
+        public IList<TeamSquad> TeamSquads { get; set; }
+
     }
 }

@@ -4,7 +4,7 @@ using Mjos.Clean.Domain.Entities;
 using Mjos.Clean.Shared;
 using MediatR;
 
-namespace Mjos.Clean.Application.Features.Players.Queries.GetStadiumById
+namespace Mjos.Clean.Application.Features.Stadiums.Queries.GetStadiumById
 {
     public record GetStadiumByIdQuery : IRequest<Result<GetStadiumByIdDto>>
     {

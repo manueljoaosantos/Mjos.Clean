@@ -7,7 +7,7 @@ using Mjos.Clean.Shared;
 
 using MediatR;
 
-namespace Mjos.Clean.Application.Features.Players.Commands.DeleteStadium
+namespace Mjos.Clean.Application.Features.Stadiums.Commands.DeleteStadium
 {
     public record DeleteStadiumCommand : IRequest<Result<int>>, IMapFrom<Stadium>
     {

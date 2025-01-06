@@ -28,6 +28,7 @@ namespace Mjos.Clean.Persistence.Contexts
         public DbSet<Player> Players => Set<Player>();
         public DbSet<Stadium> Stadiums => Set<Stadium>();
         public DbSet<Country> Countries => Set<Country>();
+        public DbSet<TeamSquad> TeamSquads => Set<TeamSquad>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
