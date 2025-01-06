@@ -1,7 +1,7 @@
 ﻿using Mjos.Clean.Domain.Common;
 using Mjos.Clean.Domain.Entities;
 
-namespace Mjos.Clean.Application.Features.Clubs.Commands.CreateStadium
+namespace Mjos.Clean.Application.Features.Stadiums.Commands.CreateStadium
 {
     public class StadiumCreatedEvent : BaseEvent
     {

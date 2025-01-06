@@ -1,7 +1,7 @@
 ﻿using Mjos.Clean.Domain.Common;
 using Mjos.Clean.Domain.Entities;
 
-namespace Mjos.Clean.Application.Features.Players.Commands.UpdateStadium
+namespace Mjos.Clean.Application.Features.Stadiums.Commands.UpdateStadium
 {
     public class StadiumUpdatedEvent : BaseEvent
     {

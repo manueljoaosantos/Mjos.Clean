@@ -5,7 +5,7 @@ using Mjos.Clean.Application.Interfaces.Repositories;
 using Mjos.Clean.Domain.Entities;
 using Mjos.Clean.Shared;
 
-namespace Mjos.Clean.Application.Features.Clubs.Commands.CreateCountry
+namespace Mjos.Clean.Application.Features.Countries.Commands.CreateCountry
 {
 
     public record CreateCountryCommand : IRequest<Result<int>>, IMapFrom<Country>

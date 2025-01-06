@@ -5,7 +5,7 @@ using Mjos.Clean.Application.Interfaces.Repositories;
 using Mjos.Clean.Domain.Entities;
 using Mjos.Clean.Shared;
 
-namespace Mjos.Clean.Application.Features.Clubs.Commands.CreateStadium
+namespace Mjos.Clean.Application.Features.Stadiums.Commands.CreateStadium
 {
 
     public record CreateStadiumCommand : IRequest<Result<int>>, IMapFrom<Stadium>

@@ -1,7 +1,7 @@
 ﻿using Mjos.Clean.Domain.Common;
 using Mjos.Clean.Domain.Entities;
 
-namespace Mjos.Clean.Application.Features.Players.Commands.DeleteStadium
+namespace Mjos.Clean.Application.Features.Stadiums.Commands.DeleteStadium
 {
     public class StadiumDeletedEvent : BaseEvent
     {

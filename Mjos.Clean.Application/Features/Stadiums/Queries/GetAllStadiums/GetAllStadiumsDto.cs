@@ -1,7 +1,7 @@
 ﻿using Mjos.Clean.Application.Common.Mappings;
 using Mjos.Clean.Domain.Entities;
 
-namespace Mjos.Clean.Application.Features.Clubs.Queries.GetAllStadiums
+namespace Mjos.Clean.Application.Features.Stadiums.Queries.GetAllStadiums
 {
     public class GetAllStadiumsDto : IMapFrom<Stadium>
     {

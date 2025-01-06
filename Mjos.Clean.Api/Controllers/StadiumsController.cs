@@ -1,10 +1,10 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Mjos.Clean.Application.Features.Clubs.Commands.CreateStadium;
-using Mjos.Clean.Application.Features.Clubs.Queries.GetAllStadiums;
-using Mjos.Clean.Application.Features.Players.Commands.DeleteStadium;
-using Mjos.Clean.Application.Features.Players.Commands.UpdateStadium;
-using Mjos.Clean.Application.Features.Players.Queries.GetStadiumById;
+using Mjos.Clean.Application.Features.Stadiums.Commands.CreateStadium;
+using Mjos.Clean.Application.Features.Stadiums.Queries.GetAllStadiums;
+using Mjos.Clean.Application.Features.Stadiums.Commands.DeleteStadium;
+using Mjos.Clean.Application.Features.Stadiums.Commands.UpdateStadium;
+using Mjos.Clean.Application.Features.Stadiums.Queries.GetStadiumById;
 using Mjos.Clean.Application.Interfaces.Repositories;
 using Mjos.Clean.Domain.Entities;
 using Mjos.Clean.Shared;

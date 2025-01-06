@@ -7,6 +7,7 @@ namespace Mjos.Clean.Domain.Entities
         public Club()
         {
             Players = new List<Player>();
+            TeamSquads = new List<TeamSquad>();
         }
 
         public string Name { get; set; } = string.Empty;
@@ -20,6 +21,8 @@ namespace Mjos.Clean.Domain.Entities
 
         public Stadium Stadium { get; set; } = new();
         public IList<Player> Players { get; set; }
+        public IList<TeamSquad> TeamSquads { get; set; }
+
     }
 }
 
