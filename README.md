@@ -41,6 +41,12 @@ git flow feature finish Application
 ```
 
 ```
+PS C:\Temp\Mjos.Clean> dotnet ef migrations add draftdataV3 -p Mjos.Clean.Persistence -s Mjos.Clean.Api -c ApplicationDbContext -o Data/Migrations
+PS C:\Temp\Mjos.Clean\Mjos.Clean.Api> dotnet ef database update -c ApplicationDbContext
+
+PS C:\Temp\Mjos.Clean> dotnet ef migrations add draftdataV2 -p Mjos.Clean.Persistence -s Mjos.Clean.Api -c ApplicationDbContext -o Data/Migrations
+PS C:\Temp\Mjos.Clean\Mjos.Clean.Api> dotnet ef database update -c ApplicationDbContext
+
 PS C:\Temp\Mjos.Clean> dotnet ef migrations add draftdata -p Mjos.Clean.Persistence -s Mjos.Clean.Api -c ApplicationDbContext -o Data/Migrations
 PS C:\Temp\Mjos.Clean\Mjos.Clean.Api> dotnet ef database update -c ApplicationDbContext
 

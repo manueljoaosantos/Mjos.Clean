@@ -17,8 +17,8 @@ namespace Mjos.Clean.Domain.Entities
         public string? InstagramUrl { get; set; }
         public int? DisplayOrder { get; set; }
 
-        public Club Club { get; set; } = new();
-        public Country Country { get; set; }= new();
+        public Club? Club { get; set; }
+        public Country? Country { get; set; }
         public IList<TeamSquad> TeamSquads { get; set; }
 
     }

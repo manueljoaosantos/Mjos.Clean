@@ -23,7 +23,7 @@ namespace Mjos.Clean.Domain.Entities
         public string? PostalCode { get; set; }
         public int? CountryId { get; set; }
 
-        public Country Country { get; set; } = new();
+        public Country? Country { get; set; }
         public IList<Club> Clubs { get; set; }
          
     }

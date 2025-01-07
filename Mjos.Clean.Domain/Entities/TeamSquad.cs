@@ -8,7 +8,7 @@ namespace Mjos.Clean.Domain.Entities
         public int PlayerId { get; set; }
         public int Year { get; set; }
 
-        public Club Club { get; set; } = new();
-        public Player Player { get; set; } = new();
+        public Club? Club { get; set; }
+        public Player? Player { get; set; }
     }
 }

@@ -1,6 +1,3 @@
-# See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
-# This stage is used when running from VS in fast mode (Default for Debug configuration)
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
 USER $APP_UID
 WORKDIR /app
@@ -19,7 +16,13 @@ COPY ["Mjos.Clean.Shared/Mjos.Clean.Shared.csproj", "Mjos.Clean.Shared/"]
 COPY ["Mjos.Clean.Infrastructure/Mjos.Clean.Infrastructure.csproj", "Mjos.Clean.Infrastructure/"]
 COPY ["Mjos.Clean.Persistence/Mjos.Clean.Persistence.csproj", "Mjos.Clean.Persistence/"]
 RUN dotnet restore "./Mjos.Clean.Api/Mjos.Clean.Api.csproj"
+
+# Copy all source code
 COPY . .
+
+# Copy SeedData files explicitly to a dedicated location in the image
+COPY ["Mjos.Clean.Persistence/Contexts/SeedData", "/app/SeedData"]
+
 WORKDIR "/src/Mjos.Clean.Api"
 RUN dotnet build "./Mjos.Clean.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
@@ -35,7 +38,11 @@ WORKDIR /app
 # Copy the HTTPS certificate files into the container
 COPY Mjos.Clean.Api/certs ./certs
 
+# Copy the published app
 COPY --from=publish /app/publish .
+
+# Ensure SeedData is included in the final image
+COPY --from=build /app/SeedData ./SeedData
 
 # Set environment variables for the certificate paths
 ENV ASPNETCORE_Kestrel__Certificates__Default__Path=/certs/https.crt
