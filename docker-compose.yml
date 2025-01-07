@@ -2,9 +2,9 @@ services:
   mjos.clean.api:
     image: ${DOCKER_REGISTRY}mjoscleanapi
     container_name: Mjos.Clean.Api
-    build:
-      context: .
-      dockerfile: Mjos.Clean.Api/Dockerfile
+    #build:
+    #  context: .
+    #  dockerfile: Mjos.Clean.Api/Dockerfile
     ports:
       - "5000:5000" # HTTP
       - "5001:5001" # HTTPS
@@ -16,6 +16,11 @@ services:
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/certs/https.crt
       - ASPNETCORE_Kestrel__Certificates__Default__KeyPath=/certs/https.key
       - OTEL_EXPORTER_OTLP_ENDPOINT:"http://jaeger:4317"
+      - ConnectionStrings__Mjsantos__SqlDb1=server=sqlserver;database=PremierLeagueDb;user id=sa;password=MjosTeste123.;Connection Timeout=6000;Persist Security Info=True;Encrypt=true;TrustServerCertificate=yes;
+      - SeedData=SeedData
+
+    networks:
+      - mjos-clean
 
   postgres:
     image: postgres:${POSTGRES_VERSION}
@@ -29,6 +34,8 @@ services:
     volumes:
       - ./postgresql/var/lib/postgresql:/var/lib/postgresql
       - ./postgresql/var/lib/postgresql/data:/var/lib/postgresql/data
+    networks:
+      - mjos-clean
 
   keycloak:
     image: quay.io/keycloak/keycloak:${KC_VERSION}
@@ -57,19 +64,30 @@ services:
       - ./keycloak/data:/data
       - ./keycloak/providers:/opt/jboss/keycloak/providers
       - ./keycloak/standalone/configuration:/opt/jboss/keycloak/standalone/configuration
+    networks:
+      - mjos-clean
 
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
     user: root
+    container_name: sqlserver
     #command: /bin/bash ./entrypoint.sh
     environment:
       SA_PASSWORD: ${SQLSERVER_SA_PASSWORD:-MjosTeste123.}
       MSSQL_SA_PASSWORD: ${SQLSERVER_MSSQL_SA_PASSWORD:-MjosTeste123.}
       ACCEPT_EULA: "Y"
+      MSSQL_ENCRYPT: "false"
+      #DB_NAME: ${DB_NAME:-PremierLeagueDb} # Pass DB_NAME from .env
     ports:
       - "1433:1433"
     volumes:
       - ./sqldata:/var/opt/mssql/data
+      - ./sql-db/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./sql-db/entrypoint.sh:/usr/config/entrypoint.sh
+    #command: ["/bin/bash", "/usr/config/entrypoint.sh"]
+
+    networks:
+      - mjos-clean
 
   jaeger:
     image: jaegertracing/all-in-one:latest
@@ -78,3 +96,9 @@ services:
       - 4317:4317
       - 4318:4318
       - 16686:16686
+    networks:
+      - mjos-clean
+
+networks:
+  mjos-clean:
+    driver: bridge

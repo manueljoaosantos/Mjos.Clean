@@ -17,6 +17,7 @@
     <ProjectReference Include="..\Mjos.Clean.Application\Mjos.Clean.Application.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Contexts\SeedData\" />
     <Folder Include="Data\" />
   </ItemGroup>
 </Project>

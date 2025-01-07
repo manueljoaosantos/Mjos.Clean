@@ -15,6 +15,7 @@ namespace Mjos.Clean.Persistence.Extensions
             //services.AddMappings();
             services.AddDbContext(configuration);
             services.AddRepositories();
+            services.AddContextSeed(configuration);
         }
 
         //private static void AddMappings(this IServiceCollection services)
@@ -31,6 +32,22 @@ namespace Mjos.Clean.Persistence.Extensions
                    builder => builder.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
         }
 
+        private static async void AddContextSeed(this IServiceCollection services, IConfiguration configuration)
+        {
+            using (var serviceProvider = services.BuildServiceProvider())
+            {
+                var context = serviceProvider.GetRequiredService<ApplicationDbContext>();
+
+                // Ensure the database exists and is up-to-date
+                if (context.Database.GetPendingMigrations().Any())
+                {
+                    context.Database.Migrate();
+                }
+                await ApplicationDbContextSeed.SeedAsync(context, configuration);
+            }
+        }
+
+
         private static void AddRepositories(this IServiceCollection services)
         {
             services
@@ -39,7 +56,8 @@ namespace Mjos.Clean.Persistence.Extensions
                 .AddTransient<IPlayerRepository, PlayerRepository>()
                 .AddTransient<IClubRepository, ClubRepository>()
                 .AddTransient<IStadiumRepository, StadiumRepository>()
-                .AddTransient<ICountryRepository, CountryRepository>();
+                .AddTransient<ICountryRepository, CountryRepository>()
+                .AddTransient<ITeamSquadRepository, TeamSquadRepository>();
         }
     }
 }

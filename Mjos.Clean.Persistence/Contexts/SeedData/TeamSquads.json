@@ -1,0 +1,263 @@
+[
+	{
+		"ClubId" : 2,
+		"PlayerId" : 2,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:21:58.230Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 3,
+		"PlayerId" : 3,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:21:58.230Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 4,
+		"PlayerId" : 4,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:21:58.230Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 5,
+		"PlayerId" : 5,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:21:58.230Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 6,
+		"PlayerId" : 6,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:21:58.230Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 7,
+		"PlayerId" : 7,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:21:58.230Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 8,
+		"PlayerId" : 8,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:21:58.230Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 9,
+		"PlayerId" : 9,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:21:58.230Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 10,
+		"PlayerId" : 10,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:21:58.230Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 2,
+		"PlayerId" : 30,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:26:13.730Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 2,
+		"PlayerId" : 32,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:26:13.730Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 3,
+		"PlayerId" : 33,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:26:13.730Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 4,
+		"PlayerId" : 34,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:26:13.730Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 5,
+		"PlayerId" : 35,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:26:13.730Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 6,
+		"PlayerId" : 36,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:26:13.730Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 7,
+		"PlayerId" : 37,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:26:13.730Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 8,
+		"PlayerId" : 38,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:26:13.730Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 9,
+		"PlayerId" : 39,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:26:13.730Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 10,
+		"PlayerId" : 31,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T14:26:13.730Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 2,
+		"PlayerId" : 30,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T18:20:59.750Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 2,
+		"PlayerId" : 32,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T18:20:59.750Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 3,
+		"PlayerId" : 33,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T18:20:59.750Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 4,
+		"PlayerId" : 34,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T18:20:59.750Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 5,
+		"PlayerId" : 35,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T18:20:59.750Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 6,
+		"PlayerId" : 36,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T18:20:59.750Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 7,
+		"PlayerId" : 37,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T18:20:59.750Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 8,
+		"PlayerId" : 38,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T18:20:59.750Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 9,
+		"PlayerId" : 39,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T18:20:59.750Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	},
+	{
+		"ClubId" : 10,
+		"PlayerId" : 31,
+		"Year" : 2023,
+		"CreatedBy" : 1,
+		"CreatedDate" : "2025-01-06T18:20:59.750Z",
+		"UpdatedBy" : null,
+		"UpdatedDate" : null
+	}
+]
