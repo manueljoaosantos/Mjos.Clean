@@ -28,7 +28,7 @@ namespace Mjos.Clean.Persistence.Extensions
             var connectionString = configuration.GetConnectionString("Mjsantos:SqlDb1");
 
             services.AddDbContext<ApplicationDbContext>(options =>
-               options.UseSqlServer(connectionString,
+               options.UseMySql(connectionString,
                    builder => builder.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
         }
 
